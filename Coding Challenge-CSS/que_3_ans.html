@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parentDiv {
+        position: static;
+        background-color: cyan;
+        height: 300px;
+        width: 500px;
+        margin: 100px;
+        text-align: center;
+      }
+
+      .firstchildDiv {
+        background-color: blueviolet;
+        height: 100px;
+        width: 100px;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+      .child2 {
+        background-color: blueviolet;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .child3 {
+        background-color: blueviolet;
+        height: 100px;
+        width: 100px;
+        position: static;
+        top: 400px;
+        left: 100px;
+      }
+      .secondParentDiv {
+        background-color: blueviolet;
+        height: 300px;
+        width: 500px;
+        position: relative;
+        margin: 100px;
+        text-align: center;
+      }
+      .child4 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: aliceblue;
+        width: 100px;
+        height: 100px;
+      }
+      .layout {
+        position: relative;
+        /* border-style: dotted; */
+        height: 500px;
+        width: 900px;
+        margin: auto;
+      }
+      .child5 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+      }
+      .child6 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgb(0, 49, 128);
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+      }
+
+      .child7 {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+      }
+      .child8 {
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        background-color: rgb(255, 128, 0);
+        width: 200px;
+        height: 200px;
+      }
+      .child9 {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        background-color: rgb(0, 34, 255);
+        width: 200px;
+        height: 200px;
+      }
+      .child10 {
+        position: absolute;
+        top: 200px;
+        right: 200px;
+        background-color: rgb(226, 35, 18);
+        width: 200px;
+        height: 200px;
+      }
+      .child11 {
+        position: absolute;
+        bottom: 0px;
+        left: 350px;
+        background-color: rgb(31, 20, 19);
+        width: 200px;
+        height: 200px;
+      }
+      .grid {
+        display: grid;
+        background-color: green;
+        margin-top: 100px;
+        grid-template-columns: 100px 100px 100px;
+        gap: 10px;
+      }
+      .box {
+        background-color: rgb(237, 72, 72);
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+      }
+      .a {
+        grid-column: 1 / 3;
+        grid-row: 1;
+      }
+      .b {
+        grid-column: 3;
+        grid-row: 1/3;
+      }
+      .c {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .d {
+        grid-column: 2;
+        grid-row: 2;
+      }
+      .e {
+        grid-column: 4;
+        grid-row: 3;
+      }
+      .f {
+        grid-column: 3;
+        grid-row: 3;
+      }
+
+      .container {
+        display: inline-flex;
+        background-color: rgb(129, 101, 194);
+        /* flex-direction: row; */
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+
+      .container2 {
+        display: inline-flex;
+        background-color: rgb(200, 147, 68);
+        /* flex-direction: row; */
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .container3 {
+        display: inline-flex;
+        background-color: rgb(151, 226, 40);
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .item {
+        background-color: rgb(233, 239, 48);
+        border-width: 5px;
+        border-style: double;
+        width: 100px;
+        height: 80px;
+        padding: 20px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="firstchildDiv">fixed</div>
+      <div class="child2">absolute</div>
+      <div class="child3">static</div>
+    </div>
+    <div class="secondParentDiv">
+      <div class="child4">absolute</div>
+    </div>
+    <div class="layout">
+      <div class="child5"></div>
+      <div class="child6"></div>
+      <div class="child7"></div>
+      <div class="child8"></div>
+      <div class="child9"></div>
+      <div class="child10"></div>
+      <div class="child11"></div>
+    </div>
+    <div class="grid">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">D</div>
+      <div class="box e">E</div>
+      <div class="box f">F</div>
+    </div>
+
+    <div class="container">
+      <div class="item">
+        <p>Item 1</p>
+      </div>
+      <div class="item">
+        <p>Item 2</p>
+      </div>
+      <div class="item">
+        <p>Item 3</p>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="item">
+        <p>Item 1</p>
+      </div>
+      <div class="item">
+        <p>Item 2</p>
+      </div>
+      <div class="item">
+        <p>Item 3</p>
+      </div>
+      <div class="item">
+        <p>Item 4</p>
+      </div>
+    </div>
+    <div class="container3">
+      <div class="item">
+        <p>Item 1</p>
+      </div>
+      <div class="item">
+        <p>Item 2</p>
+      </div>
+      <div class="item">
+        <p>Item 3</p>
+      </div>
+    </div>
+  </body>
+</html>
